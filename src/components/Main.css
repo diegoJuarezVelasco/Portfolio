@@ -1,0 +1,28 @@
+.skill-logo {
+    width: 120px;
+    height: 120px;
+    
+}
+.skillset-container {
+    display: grid;
+    row-gap: 50px;
+    justify-items: center;
+}
+@media only screen and (min-width: 400px) {
+    .skillset-container {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+}
+@media only screen and (min-width: 640px) {
+    .skillset-container {
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+}
+@media only screen and (min-width: 1400px) {
+    .skillset-container {
+        grid-template-columns: repeat(4, 1fr);
+
+    }
+}
