@@ -10,8 +10,8 @@ function Main() {
     return (
         <main>
             <About/>
-            <Skillset/>     
             <Projects/>
+            <Skillset/>     
             <Contact/>
           
         </main>

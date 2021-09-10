@@ -7,16 +7,17 @@ import {gsap} from 'gsap'
   const computerRef = useRef();
   const miniComputerRef = useRef();
   const svg = useRef();
-   const timeline = gsap.timeline();  
+   
   
 
   useEffect(() => {
-    timeline.to(svg.current,{visibility: 'visible', duration: 0});
-    timeline.from(circle.current,{y:-700, opacity: .1, duration: 1.5,  ease: 'power4'});
-    timeline.from(computerRef.current,{ x:-700, opacity: .1, duration: 2.5,  ease: "power4"});
-    timeline.from(miniComputerRef.current,{ x:700, opacity: .1, duration: 2.5,  ease: "power4"});
+    props.timeline.to(svg.current,{visibility: 'visible', duration: 0});
+    props.timeline.from(circle.current,{opacity: .1, r:0, duration: 2,  ease: 'power4', delay:.5});
+    props.timeline.from(computerRef.current,{ x:-700, opacity: .1, duration: 1,  ease: "power4"});
+    props.timeline.from(miniComputerRef.current,{ x:700, opacity: .1, duration: 1,  ease: "power4"});
     
       
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
