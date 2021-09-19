@@ -9,6 +9,11 @@ import Project from "./Project";
 gsap.registerPlugin(ScrollTrigger);
 
 function Projects() {
+  
+  
+    //Refs
+    const menuRefs = useRef([]);
+    menuRefs.current = [];
   const sectionRef = useRef();
   const h2Ref = useRef();
 
@@ -32,6 +37,8 @@ function Projects() {
     }
 
   ])
+
+
   useEffect(() => {
     gsap.from(h2Ref.current, {
       scrollTrigger: {
@@ -46,11 +53,18 @@ function Projects() {
       duration: 1,
       ease: Power0,
     });
-
+    gsap.from( menuRefs.current,
+      { x: -100, opacity: 0, duration: 1}
+      
+    );
 
 
   }, [])
-
+  const addToRefs = (el) => {
+    if (el && !menuRefs.current.includes(el)) {
+      menuRefs.current.push(el);
+    }
+  };
   return (
     <section>
     <div className="section-container" ref={sectionRef}>
@@ -66,6 +80,7 @@ function Projects() {
         description={project.description}
         alt={project.alt}
         key={project.id}
+        ref={addToRefs}
         />)}
 
         </div>

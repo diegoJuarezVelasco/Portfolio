@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Error() {
+function Error({msg}) {
     return (
         <div className="error-container">
-            <p>Completa todos los campos</p>
+            <p>{msg}</p>
         </div>
     )
 }

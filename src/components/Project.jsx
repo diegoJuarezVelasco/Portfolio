@@ -1,13 +1,11 @@
 import React, { useRef, useEffect, useState } from "react";
 
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 import { AiFillGithub } from "react-icons/ai";
-import { GrSearchAdvanced } from "react-icons/gr";
+import GlassLogo from "../icons/GlassLogo";
 import Modal from "@material-ui/core/Modal";
 import { makeStyles } from "@material-ui/core/styles";
-gsap.registerPlugin(ScrollTrigger);
+
+
 
 function getModalStyle() {
   const top = 50;
@@ -27,12 +25,15 @@ const useStyles = makeStyles((theme) => ({
     height: '90%',
     backgroundColor: theme.palette.background.paper,
     boxShadow: theme.shadows[5],
-    padding: theme.spacing(2, 4, 3),
+    padding: '50px 0px', 
     'overflow-y': 'scroll'
+  
+  
   },
 }));
 
 function Project({ id, name, url, git, img, description,alt }) {
+  
   // Configuración del modal de material-ui
   const [modalStyle] = useState(getModalStyle);
   const [open, setOpen] = useState(false);
@@ -54,9 +55,9 @@ function Project({ id, name, url, git, img, description,alt }) {
           <h3>{name}</h3>
         </div>
         <p className="project-view">
-          <span>
-            <GrSearchAdvanced/>
-          </span>
+            <span>
+                <GlassLogo className="glass-logo"/>
+            </span>
           Ver proyecto
         </p>
       </button>
@@ -81,7 +82,7 @@ function Project({ id, name, url, git, img, description,alt }) {
               <img src={img} alt={alt}/>
               <div className="modal-text"><p>{description}</p></div>
             </div>
-          
+            
         </div>
       </Modal>
     </div>

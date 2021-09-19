@@ -20,7 +20,7 @@ function About() {
             }
         });
         timeline.from(h2Ref.current, {x: 100, opacity: 0, duration: 1, ease: Power0})
-        .from(".my-photo", {width: '0px', opacity: .1, ease: "sine", duration: 1, delay: .5}).from(".about-text",{
+        .from(".my-photo", {width: '0px', opacity: .1, ease: "sine", duration: 1}).from(".about-text",{
             y:100, duration: 1, opacity: 0 
         })
 

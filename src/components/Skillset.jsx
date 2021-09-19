@@ -7,6 +7,8 @@ import NPMLogo from '../icons/NPMLogo';
 import GitLogo from '../icons/GitLogo';
 import TerminalLogo from '../icons/TerminalLogo';
 import AWSLogo from '../icons/AWSLogo';
+import NodeJSLogo from '../icons/NodeJSLogo';
+import GSAPIcon from '../icons/GSAPIcon';
 import {gsap} from 'gsap';
 
 function Skillset() {
@@ -50,8 +52,15 @@ function Skillset() {
                         <TerminalLogo className="skill-logo"/>
                     </div>
                     <div className="logo-container">
-                    <AWSLogo className="skill-logo"/>
+                     <AWSLogo className="skill-logo"/>
                     </div>
+                    <div className="logo-container">
+                     <NodeJSLogo className="skill-logo"/>
+                    </div>
+                    <div className="logo-container">
+                     <GSAPIcon className="skill-logo"/>
+                    </div>
+                   
                 </div>
             </div>
         </section>

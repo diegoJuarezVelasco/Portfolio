@@ -52,7 +52,7 @@
 }
 
 .navbar-container {
-    background-color: #222;
+    background-color: var(--black);
     height: 80px;
     display: flex;
     justify-content: flex-end;
