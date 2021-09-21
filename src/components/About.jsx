@@ -19,7 +19,7 @@ function About() {
                 toggleActions: "play none none none",
             }
         });
-        timeline.from(h2Ref.current, {x: 100, opacity: 0, duration: 1, ease: Power0})
+        timeline.from(h2Ref.current, {y: 100, opacity: 0, duration: 1, ease: Power0})
         .from(".my-photo", {width: '0px', opacity: .1, ease: "sine", duration: 1}).from(".about-text",{
             y:100, duration: 1, opacity: 0 
         })

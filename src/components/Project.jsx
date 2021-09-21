@@ -1,11 +1,8 @@
 import React, { useRef, useEffect, useState } from "react";
-
 import { AiFillGithub } from "react-icons/ai";
 import GlassLogo from "../icons/GlassLogo";
 import Modal from "@material-ui/core/Modal";
 import { makeStyles } from "@material-ui/core/styles";
-
-
 
 function getModalStyle() {
   const top = 50;
@@ -32,6 +29,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
+
 function Project({ id, name, url, git, img, description,alt }) {
   
   // Configuración del modal de material-ui
@@ -46,6 +45,8 @@ function Project({ id, name, url, git, img, description,alt }) {
   const handleClose = () => {
     setOpen(false);
   };
+
+
 
   return (
     <div className="project-container" >

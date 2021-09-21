@@ -9,7 +9,7 @@ function Main() {
   return (
     <Fragment>
       <main>
-        <About />
+        <About/>
         <Projects />
         <Skillset />
         <Contact />
