@@ -1,9 +1,10 @@
-import React, { useState} from "react";
-import './Form.css';
-import axios from 'axios';
-import Error from './Error';
-import Spinner from './Spinner';
-import Swal from 'sweetalert2';
+import React, { useState } from "react";
+import "./Form.css";
+import axios from "axios";
+import Error from "./Error";
+import Spinner from "./Spinner";
+import Swal from "sweetalert2";
+
 function Form() {
   const [formInfo, setFormInfo] = useState({
     name: "",
@@ -12,12 +13,9 @@ function Form() {
     message: "",
   });
 
-
-  const {name, phone, email, message} = formInfo;
+  const { name, phone, email, message } = formInfo;
   const [cargando, setCargando] = useState(false);
   const [error, setError] = useState(false);
-
-
 
   const handleChange = (e) => {
     setFormInfo({
@@ -26,51 +24,42 @@ function Form() {
     });
   };
   const sendEmail = async () => {
-    
-    try{
-
+    try {
+      // eslint-disable-next-line no-unused-vars
       const result = await axios({
-        method: 'POST',
-        baseURL: 'https://warm-fortress-53896.herokuapp.com',
-        url: '/send',
-        data: formInfo
+        method: "POST",
+        baseURL: "https://warm-fortress-53896.herokuapp.com",
+        url: "/send",
+        data: formInfo,
       });
-    
-      Swal.fire({
-        icon: 'success',
-        title: '¡Genial!',
-        text: 'Tu mensaje ha sido enviado 🙂'
-      }) 
-     
 
-    } catch(error) {
+      Swal.fire({
+        icon: "success",
+        title: "¡Genial!",
+        text: "Tu mensaje ha sido enviado 🙂",
+      });
+    } catch (error) {
       setCargando(false);
       Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'Algo salío mal 🙁',
-        footer: 'Inténtalo nuevamente'
-      }) 
-     
+        icon: "error",
+        title: "Oops...",
+        text: "Algo salío mal 🙁",
+        footer: "Inténtalo nuevamente",
+      });
     }
     setCargando(false);
-  }
+  };
   const handleOnSubmit = (e) => {
     e.preventDefault();
     setCargando(true);
-    if(name.trim() === '' || email.trim() === '' || message.trim() === '') {
-        setCargando(false);
-        setError(true);
-        return
-      
+    if (name.trim() === "" || email.trim() === "" || message.trim() === "") {
+      setCargando(false);
+      setError(true);
+      return;
     }
     setError(false);
     sendEmail();
-    
-  }
-
-
-
+  };
 
   return (
     <div className="form-container clearfix">
@@ -116,13 +105,13 @@ function Form() {
               value={message}
               onChange={handleChange}
               name="message"
-              />
+            />
           </div>
         </div>
-        <input type="submit" value="Enviar" className="submit-button"/>
-        {cargando ? <Spinner/> : null}
-      
-        {error ? <Error msg={'Completa los campos requeridos'}/> : null}
+        <input type="submit" value="Enviar" className="submit-button" />
+        {cargando ? <Spinner /> : null}
+
+        {error ? <Error msg={"Completa los campos requeridos"} /> : null}
       </form>
     </div>
   );

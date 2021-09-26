@@ -1,6 +1,6 @@
 import * as React  from "react"
 import { useRef, useEffect } from "react";
-import {gsap} from 'gsap'
+
  export default function PrincipalIcon(props) {
   
   const circle = useRef();

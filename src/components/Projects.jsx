@@ -1,7 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Power0 } from "gsap/all";
 import imgveri from "../img/img-verificentro.jpg";
 import donniesimg from "../img/donnies2.jpg";
 import Project from "./Project";
@@ -14,6 +13,7 @@ function Projects() {
   const sectionRef = useRef();
   const h2Ref = useRef();
 
+  // eslint-disable-next-line no-unused-vars
   const [projects, setProjects] = useState([
     {
       id: 1,
@@ -41,14 +41,13 @@ function Projects() {
     gsap.from(h2Ref.current, {
       scrollTrigger: {
         trigger: h2Ref.current,
-        start: "top center",
+        start: "top 90%",
         end: "bottom 20%",
-        toggleActions: "play none none none",
+        toggleActions: "play none none none"
       },
       y: 100,
       opacity: 0,
       duration: 1,
-      ease: Power0,
     });
     const projects = gsap.utils.toArray(".project-button");
 
@@ -56,11 +55,14 @@ function Projects() {
       gsap.from(project, {
         scrollTrigger: {
           trigger: project,
-          start: "50% center",
+          start: "top center",
           end: "bottom 20%",
           toggleActions: "play none none none",
         },
-        rotateY: 90, opacity: 0, duration: .8,
+        rotateY: 90,
+        opacity: 0,
+        duration: 0.8,
+        delay: .5,
       });
     });
     const buttons = gsap.utils.toArray(".project-links");
@@ -73,18 +75,17 @@ function Projects() {
           end: "bottom 20%",
           toggleActions: "play none none none",
         },
-        y: 200, opacity: 0
-      })
+        y: 200,
+        opacity: 0,
+      });
     });
-
-
   }, []);
 
   return (
     <section>
-      <div className="section-container" ref={sectionRef}>
+      <div className="section-container" ref={sectionRef} id="projects">
         <div className="section-title">
-          <h2 ref={h2Ref}>Projects</h2>
+          <h2 ref={h2Ref}>Proyectos</h2>
           <div className="projects-container">
             {projects.map((project) => (
               <Project

@@ -8,5 +8,5 @@ align-items: center;
 }
 .footer-text {
     color: var(--white);
-    
+    text-align: center;
 }

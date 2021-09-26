@@ -1,5 +1,5 @@
-import React, { useRef, useEffect, useState } from "react";
-import { AiFillGithub } from "react-icons/ai";
+import React, {useState } from "react";
+
 import GlassLogo from "../icons/GlassLogo";
 import Modal from "@material-ui/core/Modal";
 import { makeStyles } from "@material-ui/core/styles";
@@ -64,10 +64,6 @@ function Project({ id, name, url, git, img, description,alt }) {
       </button>
       <div className="project-links">
         <a href={url}>Visitar Sitio</a>
-        <a href={git}>
-          <AiFillGithub />
-          Watch on GitHub
-        </a>
       </div>
       <Modal
         open={open}
