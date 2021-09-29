@@ -174,16 +174,18 @@
     font-size: 1.2rem;
     display:inline-block;
     text-decoration: none;
-    color: var(--blue);
+    color: var(--white);
     border: 3px solid var(--blue);
     border-radius: 42px;
     padding: 5px 10px;
     margin: 10px;
     transition: all ease-in .3s;
+    background-color: var(--blue);
 }
 .project-links a:hover {
-    background-color: var(--blue);
+    background-color:#f1c40f;
     color: white;
+    border: 3px solid  #f1c40f;
 }
 /*Modal*/
 .modal-title {
