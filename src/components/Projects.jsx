@@ -41,7 +41,7 @@ function Projects() {
     gsap.from(h2Ref.current, {
       scrollTrigger: {
         trigger: h2Ref.current,
-        start: "top 90%",
+        start: "top center",
         end: "bottom 20%",
         toggleActions: "play none none none"
       },

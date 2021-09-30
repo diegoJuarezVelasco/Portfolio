@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect, useRef } from "react";
 import "./Header.css";
-import video from "../videos/video.mp4";
+import video from "../videos/video-header.mp4";
 import Navbar from "./Navbar";
 import Terminal2 from "./Terminal2";
 import { gsap } from "gsap";
