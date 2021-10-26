@@ -62,9 +62,9 @@ function Project({ id, name, url, git, img, description,alt }) {
           Ver proyecto
         </p>
       </button>
-      <div className="project-links">
+      {/* <div className="project-links">
         <a href={url}>Visitar Sitio</a>
-      </div>
+      </div> */}
       <Modal
         open={open}
         onClose={() => {
