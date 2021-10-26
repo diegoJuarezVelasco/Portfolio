@@ -2,7 +2,9 @@ import React, { useEffect, useRef } from "react";
 import photograph from "../img/photo.jpg";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { gsap } from "gsap";
-
+import LightBox from "./Lightbox";
+import {AiFillLinkedin} from "react-icons/ai"
+import {SiMinutemailer} from "react-icons/si"
 gsap.registerPlugin(ScrollTrigger);
 function About() {
   const sectionRef = useRef();
@@ -19,17 +21,39 @@ function About() {
     });
     timeline
       .from(h2Ref.current, { y: 100, opacity: 0, duration: 1 })
+      .from("contact-icons", {
+        x: 100, opacity: 0, duration: 1 
+      })
       .from(".my-photo", {
         width: "0px",
         opacity: 0.1,
         ease: "sine",
         duration: 1,
       })
+      .from(".contact-icons", {
+        x: -50, opacity: 0, duration: 1 
+
+      })
       .from(".about-text", {
         y: 100,
         duration: 1,
         opacity: 0,
+      })
+      const timeline2 = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".education",
+          start: "top center",
+          end: "bottom 20%",
+          toggleActions: "play none none none",
+        },
       });
+      timeline2.from(".block-heading", {
+        y:100, opacity: 0, duration: 1
+      })
+      .from(".block-content", {
+        y:100, opacity: 0, duration: 1
+      })
+  
   }, []);
 
   return (
@@ -41,16 +65,37 @@ function About() {
         <div className="about-container">
           <div className="photo-container">
             <img src={photograph} alt="myphotograph" className="my-photo" />
+            <div className="contact-icons">
+              <a href=""><AiFillLinkedin className="contact-icon"/></a>
+              <a href=""><SiMinutemailer className="contact-icon"/></a>
+              
+            </div>
           </div>
           <div className="about-text">
+            <h3>¡Hola!👋</h3>
             <p>
               Mi nombre es Diego, estudiante de último semestre de ingeniería en
               computación en la Facultad De Estudios Superiores Aragón &#x00028;
               UNAM &#x00029;. Soy desarrollador front-end y en cuanto a
-              desarrollo web se refiere, todo el conocimiento que he adquirido
-              ha sido mayormente autodidacta.
+              desarrollo web y programación se refiere, todo el conocimiento que he adquirido
+              ha sido mayormente autodidacta. Soy un apasionado por la tecnología, realmente me emociona la forma
+              en como es posible cambiar la vida de las personas a través de soluciones tecnológicas
             </p>
-          </div>
+            <LightBox/>
+          </div>  
+        </div>
+        <div className="education">
+              <div className="block">
+                <div className="block-heading">
+                  <h4>Educación</h4>
+                </div>
+                <div className="block-content">    
+                  <p>Facultad de Estudios Superiores Aragón (UNAM)</p>
+                  <p>Ingeniería en Computación</p>
+                  <p>Google Foundations of UX Design Certificate</p>
+                </div>
+              
+              </div>
         </div>
       </div>
     </section>

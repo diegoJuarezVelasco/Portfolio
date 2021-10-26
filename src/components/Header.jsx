@@ -30,6 +30,7 @@ function Header() {
 
   return (
     <Fragment>
+      <Navbar />
       <header>
         <div className="header-container container">
           <div className="header-title" ref={titleRef}>
@@ -45,7 +46,7 @@ function Header() {
           </div>
         </div>
       </header>
-      <Navbar />
+    
     </Fragment>
   );
 }

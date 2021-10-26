@@ -9,4 +9,5 @@ align-items: center;
 .footer-text {
     color: var(--white);
     text-align: center;
+    font-weight: 300;
 }

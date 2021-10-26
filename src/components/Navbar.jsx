@@ -1,29 +1,29 @@
 import React, { useState } from "react";
 import { AiOutlineBars } from "react-icons/ai";
 import { FaTimes } from "react-icons/fa";
-
+import {Link} from "react-router-dom"
 function Navbar() {
   const [menu, setMenu] = useState(false);
 
   const clickedMenu = () => {
     menu ? setMenu(false) : setMenu(true);
   };
-  const clickLink = (e) => {
-    e.preventDefault();
-    setMenu(false);
-    const target = e.target.getAttribute("href");
-    const elementLocation = document.querySelector(target).offsetTop;
+  // const clickLink = (e) => {
+  //   e.preventDefault();
+  //   setMenu(false);
+  //   const target = e.target.getAttribute("href");
+  //   const elementLocation = document.querySelector(target).offsetTop;
 
-    window.scrollTo({
-      left: 0,
-      top: elementLocation - 80,
-    });
-  };
+  //   window.scrollTo({
+  //     left: 0,
+  //     top: elementLocation - 80,
+  //   });
+  // };
 
   return (
     <div className="navbar-container">
       <nav className={menu ? "navbar active" : "navbar"}>
-        <a href="#about" className="nav-link link" onClick={clickLink}>
+        {/* <a href="#about" className="nav-link link" onClick={clickLink}>
           Acerca de mi
         </a>
         <a href="#projects" className="nav-link link" onClick={clickLink}>
@@ -34,7 +34,13 @@ function Navbar() {
         </a>
         <a href="#contact" className="nav-link link" onClick={clickLink}>
           Contacto
-        </a>
+        </a> */}
+
+        <Link className="nav-link link" to="/">Acerca de mi</Link>
+        <Link className="nav-link link" to="/projects">Proyectos</Link>
+        <Link className="nav-link link" to="/skillset">Skillset</Link>
+        <Link className="nav-link link" to="/contacto">Contacto</Link>
+      
       </nav>
       <div className="menu-movil">
         {menu ? (
