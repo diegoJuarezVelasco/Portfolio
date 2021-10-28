@@ -27,12 +27,12 @@ function Contact() {
 
   return (
     <section>
-      <div className="section-container" id="contact">
+      <div className="section-container" id="contacto">
         <div className="section-title">
           <h2 ref={h2Ref}>Contacto</h2>
-          <div className="contact-container" ref={contactRef}>
+        </div>
+        <div className="contact-container" ref={contactRef}>
             <Form />
-          </div>
         </div>
       </div>
     </section>

@@ -44,7 +44,7 @@ function Skillset() {
 
   return (
     <section>
-      <div className="section-container" id="skill">
+      <div className="section-container" id="skillset">
         <div className="section-title">
           <h2 ref={h2Ref}>Skillset</h2>
         </div>

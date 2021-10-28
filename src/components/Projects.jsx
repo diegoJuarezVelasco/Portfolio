@@ -83,7 +83,7 @@ function Projects() {
 
   return (
     <section>
-      <div className="section-container" ref={sectionRef} id="projects">
+      <div className="section-container" ref={sectionRef} id="proyectos">
         <div className="section-title">
           <h2 ref={h2Ref}>Proyectos</h2>
           <div className="projects-container">

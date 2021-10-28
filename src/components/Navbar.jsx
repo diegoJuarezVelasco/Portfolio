@@ -1,45 +1,34 @@
 import React, { useState } from "react";
 import { AiOutlineBars } from "react-icons/ai";
 import { FaTimes } from "react-icons/fa";
-import {Link} from "react-router-dom"
+import { HashLink } from 'react-router-hash-link';
 function Navbar() {
   const [menu, setMenu] = useState(false);
 
   const clickedMenu = () => {
     menu ? setMenu(false) : setMenu(true);
   };
-  // const clickLink = (e) => {
-  //   e.preventDefault();
-  //   setMenu(false);
-  //   const target = e.target.getAttribute("href");
-  //   const elementLocation = document.querySelector(target).offsetTop;
-
-  //   window.scrollTo({
-  //     left: 0,
-  //     top: elementLocation - 80,
-  //   });
-  // };
-
+  const scrollWithOffset = (el) => {
+    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+    const yOffset = -80; 
+    window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); 
+}
   return (
     <div className="navbar-container">
       <nav className={menu ? "navbar active" : "navbar"}>
-        {/* <a href="#about" className="nav-link link" onClick={clickLink}>
-          Acerca de mi
-        </a>
-        <a href="#projects" className="nav-link link" onClick={clickLink}>
-          Proyectos
-        </a>
-        <a href="#skill" className="nav-link link" onClick={clickLink}>
-          Skillset
-        </a>
-        <a href="#contact" className="nav-link link" onClick={clickLink}>
-          Contacto
-        </a> */}
-
-        <Link className="nav-link link" to="/">Acerca de mi</Link>
-        <Link className="nav-link link" to="/projects">Proyectos</Link>
-        <Link className="nav-link link" to="/skillset">Skillset</Link>
-        <Link className="nav-link link" to="/contacto">Contacto</Link>
+        <HashLink className="nav-link link" smooth to="/#acerca" scroll={el => scrollWithOffset(el)}>
+         Acerca de mi
+        </HashLink>
+        <HashLink className="nav-link link" smooth to="/proyectos#proyectos" scroll={el => scrollWithOffset(el)}>
+         Proyectos
+        </HashLink>
+        <HashLink className="nav-link link" smooth to="/skillset#skillset" scroll={el => scrollWithOffset(el)}>
+         Skillset
+        </HashLink>
+        <HashLink className="nav-link link" smooth to="/contacto#contacto" scroll={el => scrollWithOffset(el)}>
+         Contacto
+        </HashLink>
+  
       
       </nav>
       <div className="menu-movil">

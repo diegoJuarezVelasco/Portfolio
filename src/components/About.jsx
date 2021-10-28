@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from "react";
-import photograph from "../img/photo.jpg";
+import photograph from "../img/photo.png";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { gsap } from "gsap";
 import LightBox from "./Lightbox";
 import {AiFillLinkedin} from "react-icons/ai"
-import {SiMinutemailer} from "react-icons/si"
+import {MdEmail} from "react-icons/md"
 gsap.registerPlugin(ScrollTrigger);
 function About() {
   const sectionRef = useRef();
@@ -48,7 +48,7 @@ function About() {
         },
       });
       timeline2.from(".block-heading", {
-        y:100, opacity: 0, duration: 1
+        y:100, opacity: 0, duration: 1, delay: .5
       })
       .from(".block-content", {
         y:100, opacity: 0, duration: 1
@@ -58,7 +58,7 @@ function About() {
 
   return (
     <section>
-      <div className="section-container" ref={sectionRef} id="about">
+      <div className="section-container" ref={sectionRef} id="acerca">
         <div className="section-title">
           <h2 ref={h2Ref}>Acerca de mi</h2>
         </div>
@@ -66,8 +66,8 @@ function About() {
           <div className="photo-container">
             <img src={photograph} alt="myphotograph" className="my-photo" />
             <div className="contact-icons">
-              <a href=""><AiFillLinkedin className="contact-icon"/></a>
-              <a href=""><SiMinutemailer className="contact-icon"/></a>
+              <a href="https://www.linkedin.com/in/diego-juárez-velasco-0142a9224"><AiFillLinkedin className="contact-icon"/></a>
+              <a href="mailto:diegoaw591@gmail.com"><MdEmail className="contact-icon"/></a>
               
             </div>
           </div>
@@ -92,7 +92,7 @@ function About() {
                 <div className="block-content">    
                   <p>Facultad de Estudios Superiores Aragón (UNAM)</p>
                   <p>Ingeniería en Computación</p>
-                  <p>Google Foundations of UX Design Certificate</p>
+                  <p>Google Foundations of User Experience (UX) Design Certificate Program</p>
                 </div>
               
               </div>
