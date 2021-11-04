@@ -163,7 +163,10 @@
   transition-timing-function: cubic-bezier(0.7, 0, 0.2, 1);
   color: var(--blue);
 }
+.nav-link.active {
+  color: var(--blue);
 
+}
 /* .nav-link::after {
   content: "";
   top: calc(100% + 4px);

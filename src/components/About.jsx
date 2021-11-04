@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 import LightBox from "./Lightbox";
 import {AiFillLinkedin} from "react-icons/ai"
 import {MdEmail} from "react-icons/md"
+import {AiFillGithub} from "react-icons/ai"
 gsap.registerPlugin(ScrollTrigger);
 function About() {
   const sectionRef = useRef();
@@ -66,9 +67,9 @@ function About() {
           <div className="photo-container">
             <img src={photograph} alt="myphotograph" className="my-photo" />
             <div className="contact-icons">
-              <a href="https://www.linkedin.com/in/diego-juárez-velasco-0142a9224"><AiFillLinkedin className="contact-icon"/></a>
+              <a href="https://www.linkedin.com/in/diego-juárez-velasco-0142a9224" target="_blank" rel="noreferrer"><AiFillLinkedin className="contact-icon"/></a>
               <a href="mailto:diegoaw591@gmail.com"><MdEmail className="contact-icon"/></a>
-              
+              <a href="https://github.com/diegoJuarezVelasco" target="_blank" rel="noreferrer"><AiFillGithub className="contact-icon"/></a>
             </div>
           </div>
           <div className="about-text">
@@ -76,7 +77,7 @@ function About() {
             <p>
               Mi nombre es Diego, estudiante de último semestre de ingeniería en
               computación en la Facultad De Estudios Superiores Aragón &#x00028;
-              UNAM &#x00029;. Soy desarrollador front-end y en cuanto a
+              UNAM &#x00029;. Soy desarrollador front-end, en cuanto a
               desarrollo web y programación se refiere, todo el conocimiento que he adquirido
               ha sido mayormente autodidacta. Soy un apasionado por la tecnología, realmente me emociona la forma
               en como es posible cambiar la vida de las personas a través de soluciones tecnológicas

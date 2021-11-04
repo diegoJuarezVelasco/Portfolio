@@ -1,33 +1,33 @@
 import React, { useState } from "react";
 import { AiOutlineBars } from "react-icons/ai";
 import { FaTimes } from "react-icons/fa";
-import { HashLink } from 'react-router-hash-link';
+import { NavHashLink } from 'react-router-hash-link';
+import {scrollWithOffset} from '../functions/index.js';
 function Navbar() {
   const [menu, setMenu] = useState(false);
 
   const clickedMenu = () => {
     menu ? setMenu(false) : setMenu(true);
   };
-  const scrollWithOffset = (el) => {
-    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-    const yOffset = -80; 
-    window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); 
-}
+  const clickLink = () => {
+    setMenu(false);
+  };  
+
   return (
     <div className="navbar-container">
       <nav className={menu ? "navbar active" : "navbar"}>
-        <HashLink className="nav-link link" smooth to="/#acerca" scroll={el => scrollWithOffset(el)}>
+        <NavHashLink activeClassName="active" className="nav-link link" smooth to="/#acerca" scroll={el => scrollWithOffset(el)} onClick={clickLink} >
          Acerca de mi
-        </HashLink>
-        <HashLink className="nav-link link" smooth to="/proyectos#proyectos" scroll={el => scrollWithOffset(el)}>
+        </NavHashLink>
+        <NavHashLink className="nav-link link" smooth to="/proyectos#proyectos" scroll={el => scrollWithOffset(el)}onClick={clickLink}>
          Proyectos
-        </HashLink>
-        <HashLink className="nav-link link" smooth to="/skillset#skillset" scroll={el => scrollWithOffset(el)}>
+        </NavHashLink>
+        <NavHashLink className="nav-link link" smooth to="/skillset#skillset" scroll={el => scrollWithOffset(el)}onClick={clickLink}>
          Skillset
-        </HashLink>
-        <HashLink className="nav-link link" smooth to="/contacto#contacto" scroll={el => scrollWithOffset(el)}>
+        </NavHashLink>
+        <NavHashLink className="nav-link link" smooth to="/contacto#contacto" scroll={el => scrollWithOffset(el)}onClick={clickLink}>
          Contacto
-        </HashLink>
+        </NavHashLink>
   
       
       </nav>

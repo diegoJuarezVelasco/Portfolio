@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import imgveri from "../img/img-verificentro.jpg";
-import donniesimg from "../img/donnies2.jpg";
+import donniesimg from "../img/donnies1.jpg";
 import Project from "./Project";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -24,6 +24,7 @@ function Projects() {
       description:
         "Una página que realice para un centro de verificación vehicular, construida con HTML5, CSS3, Javascript, un poco de jQuery, la API de AdobeDocuments y la API de Google Maps.",
       alt: "verificentro Tu 990",
+      route: "/proyectos/proyecto-centro-de-verificacion#project-centro"
     },
     {
       id: 2,
@@ -34,6 +35,7 @@ function Projects() {
       description:
         "Una Página que realice para un taller de reparación de guitarras, usando como tecnologías HTML5, CSS3, Javascript, PHP, entre otras.",
       alt: "Donnies Guitars",
+      route: "/proyectos/proyecto-donnies-guitars"
     },
   ]);
 
@@ -97,6 +99,7 @@ function Projects() {
                 description={project.description}
                 alt={project.alt}
                 key={project.id}
+                route={project.route}
               />
             ))}
           </div>
