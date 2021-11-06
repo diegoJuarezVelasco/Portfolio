@@ -93,7 +93,7 @@ function About() {
                 <div className="block-content">    
                   <p>Facultad de Estudios Superiores Aragón (UNAM)</p>
                   <p>Ingeniería en Computación</p>
-                  <p>Google Foundations of User Experience (UX) Design Certificate Program</p>
+                  <p>Google Foundations of User Experience (UX) Design Certificate</p>
                 </div>
               
               </div>

@@ -21,7 +21,7 @@ class ViewSDKClient {
     previewFile(divId, viewerConfig) {
         const config = {
             /* Pass your registered client id */
-            clientId: "ba39662b4b3a4b0b8f424e295052b742",
+            clientId: "bbf0849a327844ecacc04ef1e8444caf",
         };
         if (divId) { /* Optional only for Light Box embed mode */
             /* Pass the div id in which PDF should be rendered */
@@ -36,7 +36,7 @@ class ViewSDKClient {
             content: {
                 /* Location of file where it is hosted */
                 location: {
-                    url: "https://porfolioproject.s3.us-east-2.amazonaws.com/cv/djvcv.pdf",
+                    url: "https://porfolioproject.s3.us-east-2.amazonaws.com/cv/djvcv2.pdf",
                     /*
                     If the file URL requires some additional headers, then it can be passed as follows:-
                     headers: [
@@ -64,7 +64,7 @@ class ViewSDKClient {
         /* Initialize the AdobeDC View object */
         this.adobeDCView = new window.AdobeDC.View({
             /* Pass your registered client id */
-            clientId: "ba39662b4b3a4b0b8f424e295052b742",
+            clientId: "bbf0849a327844ecacc04ef1e8444caf",
             /* Pass the div id in which PDF should be rendered */
             divId,
         });
