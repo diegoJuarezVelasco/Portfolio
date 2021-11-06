@@ -5,7 +5,7 @@ import donnies3 from '../img/donnies3.jpg';
 import donniesimgresponsive1 from '../img/donniesresponsive1.jpg'
 function proyecto_centro_de_verificacion() {
   return (
-    <div className="section-container" id="project-centro">
+    <div className="section-container" id="project-donnies">
       <div className="project-container">
         <div className="project">
           <div className="project-name">

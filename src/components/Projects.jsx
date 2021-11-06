@@ -35,7 +35,7 @@ function Projects() {
       description:
         "Una Página que realice para un taller de reparación de guitarras, usando como tecnologías HTML5, CSS3, Javascript, PHP, entre otras.",
       alt: "Donnies Guitars",
-      route: "/proyectos/proyecto-donnies-guitars"
+      route: "/proyectos/proyecto-donnies-guitars#project-donnies"
     },
   ]);
 
