@@ -79,8 +79,8 @@ function About() {
               computación en la Facultad De Estudios Superiores Aragón &#x00028;
               UNAM &#x00029;. Soy desarrollador front-end, en cuanto a
               desarrollo web y programación se refiere, todo el conocimiento que he adquirido
-              ha sido mayormente autodidacta. Soy un apasionado por la tecnología, realmente me emociona la forma
-              en como es posible cambiar la vida de las personas a través de soluciones tecnológicas
+              ha sido mayormente autodidacta. Me gusta crear aplicaciones que brinden una gran
+              experiencia de usuario y que principalmente resuelvan un problema.
             </p>
             <LightBox/>
           </div>  
