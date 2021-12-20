@@ -79,8 +79,7 @@ function About() {
               computación en la Facultad De Estudios Superiores Aragón &#x00028;
               UNAM &#x00029;. Soy desarrollador front-end, en cuanto a
               desarrollo web y programación se refiere, todo el conocimiento que he adquirido
-              ha sido mayormente autodidacta. Me gusta crear aplicaciones que brinden una gran
-              experiencia de usuario y que principalmente resuelvan un problema.
+              ha sido mayormente autodidacta.
             </p>
             <LightBox/>
           </div>  
@@ -93,9 +92,9 @@ function About() {
                 <div className="block-content">    
                   <p>Facultad de Estudios Superiores Aragón (UNAM)</p>
                   <p>Ingeniería en Computación</p>
-                  <p>Google Foundations of User Experience (UX) Design Certificate</p>
+                  <p>Google: Foundations of User Experience (UX) Design Certificate</p>
+                  <p>Scrum Institute: Scrum Certification For Web Developer</p>
                 </div>
-              
               </div>
         </div>
       </div>
