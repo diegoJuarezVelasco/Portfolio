@@ -74,12 +74,9 @@ function About() {
           </div>
           <div className="about-text">
             <h3>¡Hola!👋</h3>
-            <p>
-              Mi nombre es Diego, estudiante de último semestre de ingeniería en
-              computación en la Facultad De Estudios Superiores Aragón &#x00028;
-              UNAM &#x00029;. Soy desarrollador front-end, en cuanto a
-              desarrollo web y programación se refiere, todo el conocimiento que he adquirido
-              ha sido mayormente autodidacta.
+            <p>Mi nombre es Diego, estudie ingeniería en computación en la Facultad de Estudios 
+              Superiores Aragón &#x00028;UNAM&#x00029;. Soy desarrollador Front End con más de un año de experiencia creando sitios web responsive, 
+              landing pages e interfaces.
             </p>
             <LightBox/>
           </div>  
@@ -94,6 +91,20 @@ function About() {
                   <p>Ingeniería en Computación</p>
                   <p>Google: Foundations of User Experience (UX) Design Certificate</p>
                   <p>Scrum Institute: Scrum Certification For Web Developer</p>
+                </div>
+              </div>
+        </div>
+        <div className="education">
+              <div className="block">
+                <div className="block-heading">
+                  <h4>Experiencia Laboral</h4>
+                </div>
+                <div className="block-content">    
+                  <p>Global Sight Corporation</p>
+                  <p>Desarrollador Front End</p>
+                  <p>Desarrollo de landing pages responsive y animaciones utilizando HTML, CSS, Vanilla Javascript y Bootstrap</p>
+                  <p>Integración de servicios REST con AWS</p>
+                  <p>Creación de API REST con Node.js y Express.js</p>
                 </div>
               </div>
         </div>

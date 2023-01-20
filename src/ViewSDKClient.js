@@ -36,7 +36,7 @@ class ViewSDKClient {
             content: {
                 /* Location of file where it is hosted */
                 location: {
-                    url: "https://porfolioproject.s3.us-east-2.amazonaws.com/cv/djvcv2.pdf",
+                    url: "https://diegojv.s3.amazonaws.com/CV.pdf",
                     /*
                     If the file URL requires some additional headers, then it can be passed as follows:-
                     headers: [
