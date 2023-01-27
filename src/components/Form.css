@@ -86,6 +86,33 @@
         width: 98%;
     }
 
+}
+@media only screen and (min-width: 992px){
+    .form-container {
+        width: 80%;
+        margin: 0 auto;
+
+    }
+    .form-container form {
+        min-height: 700px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .form-container .submit-button {
+        margin: 0 auto;
+    }
 
 }
+@media only screen and (min-width: 1200px){
+    .form-container {
+        width: 70%;
+        margin: 0 auto;
+
+    }
+
+}
+
+
+
 

@@ -13,40 +13,25 @@ function proyecto_centro_de_verificacion() {
             <h3>Centro de verificación vehicular</h3>
           </div>
           <p className="project-text">
-            Este proyecto se trató de un sitio web que desarrolle para un centro
-            de verificación vehicular. Se desarrolló con HTML5, CSS3, Javascript
-            y jQuery.
+            Este proyecto es un sitio web que desarrollé para un centro
+            de verificación vehicular del Estado de México, se desarrolló
+            utilizando como tecnologías: HTML5, CSS3, Javascript y JQuery.
+            Este proyecto requería que se mostrara la ubicación del centro de
+            verificación, para ello se implementó la API de Google Maps que permite
+            mostrar un mapa con un pin situado en la ubicación.
           </p>
-          <img src={imgveri} alt="verificentro" className="project-image" />
-          <p className="project-text">
-            Se requería que el sitio web mostrara la ubicación del centro de
-            verificación, para lograrlo decidí implementar la API de Google Maps
-            que permite mostrar un mapa situado en la ubicación del centro.
-          </p>
-          <div className="project-image-container">
-            <img src={mapimg} alt="mapa-centro" className="project-image" />
-          </div>
-
           <p className="project-text">
             También se requería que desde el sitio web fuera posible visualizar
-            algunos archivos PDF. Para mostrar los PDF implemente la API de
+            algunos archivos en formato PDF. Para poder mostrar los archivos, se implementó la API de
             adobe: “PDF Embed API”. Con esta API el usuario puede interactuar
-            con los archivos PDF directamente desde el sitio web sin necesidad
-            de tener instalado algún lector de PDF.
+            con los archivos PDF directamente desde el sitio web sin necesidad de tener instalado
+            un visor de archivos.
           </p>
-          <div className="project-image-container">
-            <img src={pdfimg} alt="pdf-centro" className="project-image" />
-          </div>
-          <p className="project-text">
-            El sitio se adapta a distintos tipos de pantalla. 
-          </p>
-          <div className="project-image-container">
-            <img src={centroimgresponsive} alt="img-centro-responsive" className="project-image" />
-          </div>
-          <div className="project-image-container">
-            <img src={centroimgresponsive2} alt="img-centro-responsive2" className="project-image" />
-          </div>
-
+          <p className="project-text"> 
+            El sitio web es adaptable en diferentes dispositivos tanto móviles como de escritorio, en portrait y lanscape,
+            todo esto con el uso de media queries con CSS y Javascript.
+          </p> 
+          <iframe className="project-view-box" src="https://tu990.mx/" frameborder="0"></iframe>
           <div className="project-links">
             <a href="https://tu990.mx" target="_blank" rel="noreferrer">Visitar sitio web</a>
           </div>

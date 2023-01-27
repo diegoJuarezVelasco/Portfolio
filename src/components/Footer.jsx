@@ -28,7 +28,7 @@ function Footer() {
         </div>
 
         <p className="footer-text">
-          Desarrollado y diseñado por Diego Juárez &copy;
+          Desarrollado en React por Diego Juarez &copy;
         </p>
       </footer>
     </div>

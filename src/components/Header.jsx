@@ -36,7 +36,7 @@ function Header() {
           <div className="header-title" ref={titleRef}>
             <Terminal2 timeline={timeline} />
             <h1 ref={h1Ref}>Diego Juárez Velasco</h1>
-            <p ref={pRef}>Desarrollador Front-end</p>
+            <p ref={pRef}>Desarrollador Front-End</p>
           </div>
 
           <div className="video-container container">
