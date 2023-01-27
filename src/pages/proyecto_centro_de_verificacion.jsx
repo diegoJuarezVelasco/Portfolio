@@ -1,9 +1,4 @@
 import React from "react";
-import imgveri from "../img/img-verificentro.jpg";
-import mapimg from "../img/imgmapa.jpg";
-import pdfimg from "../img/pdf1.jpg";
-import centroimgresponsive from "../img/capturacentroresponsive1.jpg"
-import centroimgresponsive2 from "../img/capturacentroresponsive2.jpg"
 function proyecto_centro_de_verificacion() {
   return (
     <div className="section-container" id="project-centro">
@@ -31,7 +26,7 @@ function proyecto_centro_de_verificacion() {
             El sitio web es adaptable en diferentes dispositivos tanto móviles como de escritorio, en portrait y lanscape,
             todo esto con el uso de media queries con CSS y Javascript.
           </p> 
-          <iframe className="project-view-box" src="https://tu990.mx/" frameborder="0"></iframe>
+          <iframe title="verificentro-iframe" className="project-view-box" src="https://tu990.mx/" frameborder="0"></iframe>
           <div className="project-links">
             <a href="https://tu990.mx" target="_blank" rel="noreferrer">Visitar sitio web</a>
           </div>
