@@ -102,7 +102,7 @@ function About() {
                 <div className="block-content">    
                   <p>Global Sight Corporation</p>
                   <p>Desarrollador Front End</p>
-                  <p>Desarrollo de landing pages, animaciones, UI con HTML CSS, Bootstrap y Vanilla Javascript</p>
+                  <p>Desarrollo de landing pages, animaciones, UI con HTML CSS, Javascript, Bootstrap, y React</p>
                   <p>Diseño responsivo</p>
                   <p>Implementación de API REST con Node.js y Express.js</p>
                   <p>Integración de servicios AWS en aplicaciones web (funciones serverless con Lambda, AWS SDK)</p>
