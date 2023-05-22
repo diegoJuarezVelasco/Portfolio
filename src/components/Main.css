@@ -123,7 +123,7 @@
 }
 /*experience*/
 .experience-container {
-    margin: 10% 0;
+    margin: 20% 0;
     padding: 0 20px;
 }
 .experience {
@@ -146,6 +146,21 @@
     font-size: 1.6rem;
     font-family: Josefin sans;
     font-style: italic;
+}
+@media only screen and (min-width: 480px) {
+    .experience-container {
+        margin: 15% 0;
+    }
+}
+@media only screen and (min-width: 680px) { 
+    .experience-container {
+        margin-top: 10%;
+    }
+}
+@media only screen and (min-width: 768px) { 
+    .experience {
+        margin-bottom: 10%;
+    }
 }
 @media only screen and (min-width: 992px) {
     .experience-container {
