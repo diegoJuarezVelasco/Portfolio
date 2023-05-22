@@ -1,8 +1,4 @@
 import React from "react";
-import donnies1 from '../img/donnies1.jpg';
-import donnies2 from '../img/donnies2.jpg';
-import donnies3 from '../img/donnies3.jpg';
-import donniesimgresponsive1 from '../img/donniesresponsive1.jpg'
 function proyecto_centro_de_verificacion() {
   return (
     <div className="section-container" id="project-donnies">
@@ -31,25 +27,9 @@ function proyecto_centro_de_verificacion() {
             El sitio web es adaptable en diferentes dispositivos tanto móviles como de escritorio, en portrait y lanscape,
             todo esto con el uso de media queries con CSS y Javascript.
           </p> 
-          <p></p>
-          <div className="project-image-container">
-            <img src={donnies1} alt="donnies1" className="project-image" />
-          </div>
-          <div className="project-image-container">
-            <img src={donnies2} alt="donnies2" className="project-image"/>          
-          </div>
-          <div className="project-image-container">
-            <img src={donnies3} alt="donnies3" className="project-image"/>
-          </div>
-          {/* <p className="project-text">
-            El sitio es responsivo, por lo tanto se adapta a distintos tipos de pantalla.
-          </p> */}
-          <div className="project-image-container">
-            <img src={donniesimgresponsive1} alt="donniesresponsive1" className="project-image"/>
-          </div>
-
+          <iframe title="verificentro-iframe" className="project-view-box" src="https://donniesguitars.com.mx" frameborder="0"></iframe>
           <div className="project-links">
-            <a href="https://donniesguitars.com" target="_blank" rel="noreferrer">Visitar sitio web</a>
+            <a href="https://donniesguitars.com.mx" target="_blank" rel="noreferrer">Visitar sitio web</a>
           </div>
 
         </div>

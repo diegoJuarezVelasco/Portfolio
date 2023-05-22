@@ -121,6 +121,50 @@
     margin: 100px 0;
     padding: 0 20px;
 }
+/*experience*/
+.experience-container {
+    margin: 10% 0;
+    padding: 0 20px;
+}
+.experience {
+    margin-bottom: 15%;
+}
+.experience-content {
+    margin-bottom: 10%;
+}
+.experience-content p:first-of-type {
+    font-weight: 700;
+}
+.experience-content ul li {
+    margin-bottom: 3%;
+}
+.experience-title-container {
+    border-bottom: 3px solid #f1c40f;
+    display: inline-block;
+}
+.experience-title {
+    font-size: 1.6rem;
+    font-family: Josefin sans;
+    font-style: italic;
+}
+@media only screen and (min-width: 992px) {
+    .experience-container {
+        padding: 0 100px;
+    }
+    .experience-title-container {
+        display: block;
+    }
+    .experience {
+        margin-bottom: 6%;
+    }
+    .experience-content {
+        margin-bottom: 5%;
+    }
+    .experience-content ul li {
+        margin-bottom: 2%;
+    }
+}
+
 
 /*projects*/
 .project-view-box {
